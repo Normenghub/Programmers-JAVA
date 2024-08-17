@@ -1,4 +1,4 @@
-class Solution {
+class 문자열내p와y의개수 {
     boolean solution(String s) {
         int p,y;
         p = 0;
