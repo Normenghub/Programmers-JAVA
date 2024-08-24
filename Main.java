@@ -4,26 +4,14 @@
 * */
 
 
-import java.util.Scanner;
+import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
-        int a = 1;
-        int b = 0;
-        int savea,saveb;
-        for(int i = 1; i <=n; i++) {
-                savea = a;
-                saveb = b;
-                b +=savea;
-                a = a-savea + saveb;
+        Character c = scanner.next().charAt(0);
+
+        System.out.println((int) c - 'a');
 
 
-
-
-        }
-
-        System.out.print(a);
-        System.out.println(" " + b);
     }
 }
