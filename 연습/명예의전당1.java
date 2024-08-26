@@ -1,3 +1,5 @@
+package 연습;
+
 import java.util.*;
 public class 명예의전당1 {
     class Solution {
