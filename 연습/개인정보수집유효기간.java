@@ -22,10 +22,24 @@ public class 개인정보수집유효기간 {
                 int[] saveArr = {(Integer.parseInt(separateArr[0])),(Integer.parseInt(separateArr[1]) + map.get(testArr[1])),(Integer.parseInt(separateArr[2]))};
                 saveArr[0] += saveArr[1] / 12;
                 saveArr[1] = saveArr[1] % 12;
+
                 if(saveArr[1] == 0){
                     saveArr[0]--;
                     saveArr[1] = 12;
+
                 }
+                if(saveArr[2] == 1){
+                    saveArr[2] = 28;
+                    saveArr[1]--;
+                    if(saveArr[1] == 0){
+                        saveArr[0]--;
+                        saveArr[1] = 12;
+
+                    }
+                }else{
+                    saveArr[2]--;
+                }
+
                 boolean flag = true;
                 if(saveArr[0] < todayArr[0]){
                     list.add(index++);
@@ -41,7 +55,7 @@ public class 개인정보수집유효기간 {
                         index++;
                         continue;
                     }else{
-                        if(saveArr[2] <= todayArr[2]){
+                        if(saveArr[2] < todayArr[2]){
                             list.add(index++);
                             continue;
                         }else{
