@@ -1,4 +1,7 @@
+package Level2;
+
 import java.util.*;
+public class 모음사전{
 class Solution {
     static ArrayList<String> strList = new ArrayList<>();
     static String[] words = {"A", "E", "I", "O", "U"};
@@ -17,4 +20,6 @@ class Solution {
         }
 
     }
+}
+
 }
